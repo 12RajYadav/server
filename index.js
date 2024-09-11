@@ -28,6 +28,10 @@ connectDB();
 //Route
 app.use("/products", productRoutes);
 app.use("/user", userRoutes);
+// Base Route 
+app.get("/",(req,res)=>{
+  res.send("wellcome to the API");
+});
 
 //Running server
 app.listen(PORT, () => {
